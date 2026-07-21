@@ -1,0 +1,91 @@
+  :root{
+    --accent:#000;
+    --accent-2:#ffd600; /* желтый логотипа */
+    --border: #000;
+    --bg: #fff;
+    --text:#111;
+    --maxw:1100px;
+  }
+  *{box-sizing:border-box}
+  body{
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    margin:20px;
+    background:var(--bg);
+    color:var(--text);
+    display:flex;
+    justify-content:center;
+  }
+  .wrap{width:100%;max-width:var(--maxw)}
+  header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:18px;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .logo{
+    width:64px;height:64px;border-radius:10px;
+    background:linear-gradient(180deg,var(--accent-2) 0 60%, #000 60% 100%);
+    display:flex;align-items:center;justify-content:center;
+    border:4px solid var(--border);
+    font-weight:700;color:#000;
+    font-size:22px;
+  }
+  nav{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    font-size:16px;
+  }
+  nav a{color:var(--text);text-decoration:none;opacity:.9}
+  .container{
+    border:4px solid var(--border);
+    padding:26px;
+  }
+  h1{font-size:36px;margin:6px 0 22px;font-weight:700}
+  .content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    align-items:start;
+  }
+  .left img{width:100%;height:auto;border:3px solid var(--border);display:block}
+  .prices{
+    border-left:1px solid transparent; /* визуально справа от фото */
+  }
+  ol.services{
+    padding-left:1.1em;
+    margin:0;
+    font-size:20px;
+    line-height:1.8;
+  }
+  .service-item{
+    border:2px solid var(--border);
+    padding:14px;
+    margin-bottom:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+  }
+  .service-item strong{font-size:20px}
+  .price{font-weight:700;font-size:20px}
+  /* адаптив */
+  @media (max-width:800px){
+    .content{grid-template-columns:1fr;gap:18px}
+    .logo{width:56px;height:56px}
+    h1{font-size:28px}
+  }
+  footer{
+    display:flex;
+    justify-content:center;
+    gap:28px;
+    margin-top:18px;
+  }
+  .icon{width:60px;height:60px;display:flex;align-items:center;justify-content:center;border-radius:10px;border:2px solid #111}
+  .icon img{width:48px;height:48px;object-fit:contain}
+  }

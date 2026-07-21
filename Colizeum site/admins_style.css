@@ -1,0 +1,196 @@
+  :root{
+    --border:#000;
+    --accent:#ffd400;
+    --text:#111;
+    --gap:24px;
+    --maxw:1100px;
+  }
+  *{box-sizing:border-box}
+  body{
+    font-family: "Arial", sans-serif;
+    color:var(--text);
+    margin:0;
+    padding:32px;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+  }
+
+  .wrap{
+    width:100%;
+    max-width:var(--maxw);
+  }
+
+  /* header */
+  header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    margin-bottom:var(--gap);
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:16px;
+  }
+  .logo{
+    width:96px;
+    height:96px;
+    border-radius:50%;
+    border:6px solid var(--border);
+    background:var(--accent);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    font-size:28px;
+  }
+  nav a{
+    margin:0 10px;
+    color:#000;
+    text-decoration:none;
+    font-size:18px;
+  }
+  nav a.active{ text-decoration:underline; font-weight:600}
+
+  /* content box */
+  .box{
+    border:4px solid var(--border);
+    padding:28px;
+  }
+
+  h1{
+    margin:0 0 20px 0;
+    font-size:36px;
+  }
+
+  .admin-list{
+    display:flex;
+    gap:24px;
+    align-items:flex-start;
+  }
+
+  .photo{
+    flex:0 0 320px;
+  }
+  .photo img{
+    width:100%;
+    display:block;
+    border:1px solid #ddd;
+  }
+
+  .info{
+    flex:1;
+  }
+
+  /* === ВЛОЖЕННЫЙ СПИСОК АДМИНОВ === */
+  .admin-group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .admin-group > li {
+    list-style: none;
+  }
+
+  .group-title {
+    font-weight: 700;
+    font-size: 24px;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  /* список самих администраторов (вложенный) */
+  .admin-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .admin-items > li {
+    position: relative;
+    padding: 18px 18px 18px 78px;
+    border: 2px solid #000;
+    margin-bottom: 18px;
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+  }
+  /* кастомный маркер-галочка */
+  .admin-items > li::before {
+    content: '';
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("https://img.icons8.com/ios-filled/50/000000/checkmark.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  /* вложенный список контактов внутри каждого админа */
+  .admin-items li ol {
+    margin-top: 8px;
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  .admin-items li ol li {
+    padding: 8px 8px 8px 48px;
+    border: 1px dashed #999;
+    margin-top: 8px;
+    position: relative;
+    background: #fafafa;
+  }
+  .admin-items li ol li::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("https://img.icons8.com/ios/50/000000/dot.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+  }
+
+  .admin-name{
+    font-weight:700;
+    font-size:20px;
+    margin-bottom:6px;
+  }
+  .admin-role{ color:#333; margin-bottom:6px;}
+  .small{ color:#444; font-size:14px;}
+
+  /* footer icons — теперь фотографии */
+  .socials{
+    display:flex;
+    justify-content:center;
+    gap:22px;
+    margin-top:26px;
+  }
+  .socials a{
+    display:block;
+    width:64px;
+    height:64px;
+    border:3px solid var(--border);
+    border-radius:12px;
+    overflow:hidden;
+    text-decoration:none;
+  }
+  .socials a img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  /* responsive */
+  @media(max-width:880px){
+    .admin-list{ flex-direction:column; }
+    .photo{ width:100%; flex-basis:auto; }
+  }

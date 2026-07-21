@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Colizeum — Расписание админов</title>
+<link rel="stylesheet" href="timetable_style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo-wrap">
+          <!-- Замените src на ваше фото логотипа -->
+          <img src="Ellipse%201.png" alt="Логотип Colizeum">
+        </div>
+          <div>
+          <div style="font-size:28px; font-weight:700">Colizeum</div>
+        </div>
+      </div>
+      <nav>
+        <a href="colizeum.html">Новости</a>
+        <a href="admins.html">Админы</a>
+        <a href="prices.html">Цены</a>
+        <a href="timetable.html" class="active">Расписание</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+    </header>
+
+    <main class="frame">
+      <h1>Расписание админов</h1>
+
+      <div class="schedule-wrap">
+        <!-- Таблица с объединением ячеек: rowspan и colspan -->
+        <table class="schedule" aria-label="Расписание админов">
+          <thead>
+            <tr>
+              <th style="width:45%">Администратор</th>
+              <th style="width:25%">Дни</th>
+              <th style="width:30%">Часы</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Алексей с объединением дней по rowspan чтобы показать пример объединения -->
+            <tr>
+              <td>
+                <div class="admin-name">Алексей</div>
+                <div class="role">Главный админ</div>
+                <div style="margin-top:8px;font-size:13px;color:#444">
+                  Отвечает за работу зала, турниры и техподдержку
+                </div>
+              </td>
+              <td rowspan="2">Пн — Вс</td>
+              <td class="hours">10:00 — 22:00</td>
+            </tr>
+
+            <!-- Марина находится под rowspan дней у Алексея -->
+            <tr>
+              <td>
+                <div class="admin-name">Марина</div>
+                <div class="role">Админ и стример</div>
+                <div style="margin-top:8px;font-size:13px;color:#444">
+                  Координирует трансляции, отвечает на соцсети
+                </div>
+              </td>
+              <td class="hours">12:00 — 20:00</td>
+            </tr>
+
+            <!-- Иван отдельная запись -->
+            <tr>
+              <td>
+                <div class="admin-name">Иван</div>
+                <div class="role">Технический админ</div>
+                <div style="margin-top:8px;font-size:13px;color:#444">
+                  Настройка ПК и оборудования
+                </div>
+              </td>
+              <td>Вт, Чт</td>
+              <td class="hours">10:00 — 18:00</td>
+            </tr>
+
+            <!-- Информационная строка объединяющая все столбцы -->
+            <tr>
+              <td colspan="3" style="background:#f0f0f0;text-align:center;font-weight:700;padding:16px">
+                Для срочных вопросов звоните или пишите в соцсети
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Замена эмодзи на фотографии в тех же рамках -->
+      <div class="footer-icons">
+        <a class="icon" href="#" title="Администратор 1">
+          <img src="Telegram%20App.png" alt="Фото администратора 1">
+        </a>
+        <a class="icon" href="#" title="Администратор 2">
+          <img src="VK%20com.png" alt="Фото администратора 2">
+        </a>
+        <a class="icon" href="#" title="Администратор 3">
+          <img src="Phone.png" alt="Фото администратора 3">
+        </a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
