@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Угадай Мем</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-panel">
+            <header class="header">
+                <div class="logo">
+                    <span class="logo-mark">◼</span>
+                    <span class="logo-text">УГАДАЙ МЕМ</span>
+                </div>
+            </header>
+
+            <div class="difficulty-row">
+                <button class="diff-btn active" data-diff="easy">Лёгкий</button>
+                <button class="diff-btn" data-diff="medium">Средний</button>
+                <button class="diff-btn" data-diff="hard">Сложный</button>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat"><span class="s-label">СЧЁТ</span><span id="score" class="s-value">0</span></div>
+                <div class="stat"><span class="s-label">СЕРИЯ</span><span id="streak" class="s-value">0</span></div>
+                <div class="stat"><span class="s-label">МЕМ</span><span id="memeCount" class="s-value">0/10</span></div>
+                <div class="stat"><span class="s-label">РЕКОРД</span><span id="best" class="s-value">0</span></div>
+            </div>
+
+            <div class="meme-stage">
+                <div class="image-box" id="imageBox">
+                    <img id="memeImage" src="" alt="Мем" />
+                    <div id="placeholder" class="placeholder">
+                        <span>Изображение не найдено</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hint-area">
+                <span class="hint-label">Подсказка:</span>
+                <span id="hintText" class="hint-text">...</span>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="answerInput" placeholder="Введите название мема..." autocomplete="off">
+                <button id="submitBtn" class="btn-primary">ОТПРАВИТЬ</button>
+                <button id="skipBtn" class="btn-ghost">ПРОПУСТИТЬ [-50]</button>
+            </div>
+
+            <div id="timerWrapper" class="timer-line">
+                <div id="timerFill" class="timer-fill"></div>
+            </div>
+
+            <div id="message" class="message"></div>
+        </div>
+
+        <div id="overlay" class="overlay">
+            <div class="overlay-card">
+                <div id="overlayTitle" class="overlay-title"></div>
+                <div id="overlayBody" class="overlay-body"></div>
+                <button id="overlayBtn" class="btn-primary">RESTART</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

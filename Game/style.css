@@ -1,0 +1,352 @@
+:root {
+    --bg: #f2f4f7;
+    --panel-bg: #ffffff;
+    --text: #1f2937;
+    --text-secondary: #6b7280;
+    --border: #d1d5db;
+    --border-dark: #9ca3af;
+    --accent: #111827;
+    --error: #b91c1c;
+    --success: #15803d;
+    --warning: #a16207;
+    --font: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    font-family: var(--font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text);
+    padding: 2rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 680px;
+}
+
+.game-panel {
+    background: var(--panel-bg);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-mark {
+    font-size: 1.4rem;
+    color: var(--accent);
+}
+
+.logo-text {
+    font-weight: 600;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    color: var(--text);
+    text-transform: uppercase;
+}
+
+.ver {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+}
+
+.difficulty-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.diff-btn {
+    flex: 1;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 0.8rem 0.5rem;
+    font-family: var(--font);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.diff-btn:hover {
+    border-color: var(--accent);
+    color: var(--text);
+}
+
+.diff-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+.stats-row {
+    display: flex;
+    background: #f9fafb;
+    border: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+
+.stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem 0.5rem;
+    border-right: 1px solid var(--border);
+}
+
+.stat:last-child {
+    border-right: none;
+}
+
+.s-label {
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+}
+
+.s-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.meme-stage {
+    margin-bottom: 1.5rem;
+}
+
+.image-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #f3f4f6;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    z-index: 2;
+}
+
+.placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    background: #f9fafb;
+    font-size: 0.9rem;
+    z-index: 1;
+}
+
+.hint-area {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 0.75rem;
+    border-left: 3px solid var(--accent);
+}
+
+.hint-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+.hint-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.input-area {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.input-area input {
+    flex: 2;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    padding: 0.8rem 1rem;
+    font-family: var(--font);
+    font-size: 1rem;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-area input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(17,24,39,0.1);
+}
+
+.input-area input::placeholder {
+    color: var(--text-secondary);
+}
+
+.btn-primary {
+    background: var(--accent);
+    border: 1px solid var(--accent);
+    color: #ffffff;
+    font-family: var(--font);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.btn-primary:hover {
+    background: #374151;
+}
+
+.btn-ghost {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-family: var(--font);
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.btn-ghost:hover {
+    border-color: var(--accent);
+    color: var(--text);
+}
+
+.timer-line {
+    height: 4px;
+    background: #e5e7eb;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.timer-fill {
+    height: 100%;
+    width: 100%;
+    background: var(--accent);
+    transition: width 0.1s linear;
+}
+
+.message {
+    min-height: 1.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s ease;
+    z-index: 100;
+}
+
+.overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay-card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    padding: 2.5rem;
+    text-align: center;
+    max-width: 380px;
+    width: 90%;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+.overlay-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.overlay-body {
+    color: var(--text-secondary);
+    margin-bottom: 1.8rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+    .game-panel {
+        padding: 1.2rem;
+    }
+    .input-area {
+        flex-wrap: wrap;
+    }
+    .btn-ghost {
+        flex: 1;
+    }
+}
