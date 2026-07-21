@@ -1,0 +1,119 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+        }
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .burger {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        #burger-toggle {
+            display: none;
+        }
+        .menu {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        .main {
+            padding: 2rem;
+        }
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .contact-info {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+        }
+        .contact-info h3 {
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+        }
+        .contact-item {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        .map-placeholder {
+            background: #ecf0f1;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 250px;
+            border: 1px dashed #95a5a6;
+        }
+        .map-placeholder span {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer {
+            background: #34495e;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .burger {
+                display: block;
+            }
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: #2c3e50;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                padding: 1rem;
+                gap: 1rem;
+            }
+            #burger-toggle:checked + .burger + .menu {
+                display: flex;
+            }
+            .nav-container {
+                flex-wrap: wrap;
+            }
+            .contacts-grid {
+                grid-template-columns: 1fr;
+            }
+        }

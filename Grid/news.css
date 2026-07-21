@@ -1,0 +1,115 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+        }
+        /* Шапка с бургер-меню */
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        /* Бургер-иконка */
+        .burger {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        #burger-toggle {
+            display: none;
+        }
+        .menu {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        /* Основной контент */
+        .main {
+            padding: 2rem;
+        }
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .news-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            background: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .news-card h3 {
+            margin-bottom: 0.75rem;
+            color: #2c3e50;
+        }
+        .news-card .date {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .badge {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Футер */
+        .footer {
+            background: #34495e;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .burger {
+                display: block;
+            }
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: #2c3e50;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                padding: 1rem;
+                gap: 1rem;
+            }
+            #burger-toggle:checked + .burger + .menu {
+                display: flex;
+            }
+            .nav-container {
+                flex-wrap: wrap;
+            }
+        }
