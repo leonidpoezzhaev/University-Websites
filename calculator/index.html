@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор дробей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="calculator">
+    <div class="header">
+        <div class="logo" aria-label="логотип дробей"></div>
+        <h1>Калькулятор дробей</h1>
+    </div>
+
+    <div class="input-group">
+        <div class="fraction-card">
+            <p>Дробь №1</p>
+            <div class="fraction-inputs">
+                <div class="frac-field">
+                    <label>ЧИСЛИТЕЛЬ</label>
+                    <input type="number" id="num1" value="3" step="1" placeholder="3">
+                </div>
+                <span class="separator">⁄</span>
+                <div class="frac-field">
+                    <label>ЗНАМЕНАТЕЛЬ</label>
+                    <input type="number" id="den1" value="4" step="1" placeholder="4">
+                </div>
+            </div>
+        </div>
+        <div class="fraction-card">
+            <p>Дробь №2</p>
+            <div class="fraction-inputs">
+                <div class="frac-field">
+                    <label>ЧИСЛИТЕЛЬ</label>
+                    <input type="number" id="num2" value="2" step="1" placeholder="5">
+                </div>
+                <span class="separator">⁄</span>
+                <div class="frac-field">
+                    <label>ЗНАМЕНАТЕЛЬ</label>
+                    <input type="number" id="den2" value="5" step="1" placeholder="8">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="buttons-panel">
+        <button class="oper-btn btn-add" id="addBtn" aria-label="Сложить"></button>
+        <button class="oper-btn btn-sub" id="subBtn" aria-label="Вычесть"></button>
+        <button class="oper-btn btn-mul" id="mulBtn" aria-label="Умножить"></button>
+        <button class="oper-btn btn-div" id="divBtn" aria-label="Разделить"></button>
+    </div>
+
+    <div class="result-area">
+        <div class="result-label">РЕЗУЛЬТАТ</div>
+        <p class="result-fraction" id="resultDisplay">— / —</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
