@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заказ книги — Книжный червь</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Книжный червь</div>
+    <button class="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="news.html">Новости</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="about.html">О нас</a>
+      <a href="order.html" class="active">Заказ</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <h2>Заказ книги</h2>
+    <form id="orderForm" class="booking-form">
+      <div class="form-group">
+        <label for="bookTitle">Название книги *</label>
+        <input type="text" id="bookTitle" name="bookTitle" required>
+      </div>
+      <div class="form-group">
+        <label for="author">Автор</label>
+        <input type="text" id="author" name="author">
+      </div>
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Телефон *</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="format">Формат *</label>
+        <select id="format" name="format" required>
+          <option value="">Выберите</option>
+          <option value="Твердый переплет">Твёрдый переплёт</option>
+          <option value="Мягкий переплет">Мягкий переплёт</option>
+          <option value="Электронная">Электронная</option>
+          <option value="Аудиокнига">Аудиокнига</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="quantity">Количество *</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+      </div>
+      <div class="form-group">
+        <label for="delivery">Способ получения *</label>
+        <select id="delivery" name="delivery" required>
+          <option value="">Выберите</option>
+          <option value="Самовывоз">Самовывоз из магазина</option>
+          <option value="Доставка курьером">Доставка курьером</option>
+          <option value="Почта России">Почта России</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="address">Адрес доставки (если выбрана)</label>
+        <input type="text" id="address" name="address">
+      </div>
+      <div class="form-group">
+        <label>Подарочная упаковка</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="gift" value="Да"> Да, завернуть в крафт</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="comments">Комментарий</label>
+        <textarea id="comments" name="comments" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn">Оформить заказ</button>
+    </form>
+    <div id="orderResult" class="booking-result"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-col">
+      <h4>Контакты</h4>
+      <p>+7 (999) 765-43-21</p>
+      <p>books@bookworm.ru</p>
+    </div>
+    <div class="footer-col">
+      <h4>Мы в соцсетях</h4>
+      <p>ВКонтакте | Telegram | YouTube</p>
+    </div>
+    <div class="footer-col">
+      <p>&copy; 2026 Книжный червь. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

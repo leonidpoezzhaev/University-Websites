@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости — Книжный червь</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+    <div class="logo">Книжный червь</div>
+    <button class="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+    </button>
+    <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="news.html" class="active">Новости</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="about.html">О нас</a>
+        <a href="order.html">Заказ</a>
+        <a href="contacts.html">Контакты</a>
+    </nav>
+</header>
+
+<main class="main">
+    <h2>Новости мира книг</h2>
+    <div class="news-grid">
+        <article class="news-card" data-news="1">
+            <img src="images/news1.jpg" alt="Встреча с автором">
+            <h3>Встреча с автором</h3>
+            <p>Приглашаем на творческий вечер с писателем Дмитрием Глуховским.</p>
+        </article>
+        <article class="news-card" data-news="2">
+            <img src="images/news2.jpg" alt="Новое поступление комиксов">
+            <h3>Новое поступление комиксов</h3>
+            <p>В продаже лимитированная серия графических романов Marvel.</p>
+        </article>
+        <article class="news-card" data-news="3">
+            <img src="images/news3.jpg" alt="Скидки на классику">
+            <h3>Скидки на классику</h3>
+            <p>Весь апрель скидка 25% на произведения русских классиков.</p>
+        </article>
+        <article class="news-card" data-news="4">
+            <img src="images/news4.jpg" alt="Детский уголок">
+            <h3>Детский уголок</h3>
+            <p>Открыта игровая зона с книгами и раскрасками для маленьких читателей.</p>
+        </article>
+        <article class="news-card" data-news="5">
+            <img src="images/news5.jpg" alt="Книжный клуб">
+            <h3>Книжный клуб</h3>
+            <p>Обсуждаем «Мастера и Маргариту» 15 мая в 18:00.</p>
+        </article>
+        <article class="news-card" data-news="6">
+            <img src="images/news6.jpg" alt="Аудиокниги бесплатно">
+            <h3>Аудиокниги бесплатно</h3>
+            <p>При покупке бумажной версии — аудиокнига в подарок.</p>
+        </article>
+    </div>
+</main>
+
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content" id="modalContent">
+        <span class="modal-close" id="modalClose">&times;</span>
+        <div id="modalBody"></div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-col">
+        <h4>Контакты</h4>
+        <p>+7 (999) 765-43-21</p>
+        <p>books@bookworm.ru</p>
+    </div>
+    <div class="footer-col">
+        <h4>Мы в соцсетях</h4>
+        <p>ВКонтакте | Telegram | YouTube</p>
+    </div>
+    <div class="footer-col">
+        <p>&copy; 2026 Книжный червь. Все права защищены.</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

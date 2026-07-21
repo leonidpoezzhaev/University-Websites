@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Книжный червь — Главная</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Книжный червь</div>
+    <button class="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav">
+      <a href="index.html" class="active">Главная</a>
+      <a href="news.html">Новости</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="about.html">О нас</a>
+      <a href="order.html">Заказ</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+  </header>
+
+  <main class="main home">
+    <section class="hero">
+      <h1>Добро пожаловать в «Книжный червь»</h1>
+      <p>Уютный магазин для любителей чтения. Новинки, классика и редкие издания.</p>
+    </section>
+    <div id="datetime" class="datetime"></div>
+    <section class="slider-container">
+      <div class="slider">
+        <div class="slide active"><img src="images/slider1.jpg" alt="Интерьер магазина"></div>
+        <div class="slide"><img src="images/slider2.jpg" alt="Читатель с книгой"></div>
+        <div class="slide"><img src="images/slider3.jpg" alt="Книжные полки"></div>
+      </div>
+      <button class="slider-btn prev" id="prevSlide">&#10094;</button>
+      <button class="slider-btn next" id="nextSlide">&#10095;</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-col">
+      <h4>Контакты</h4>
+      <p>+7 (999) 765-43-21</p>
+      <p>books@bookworm.ru</p>
+    </div>
+    <div class="footer-col">
+      <h4>Мы в соцсетях</h4>
+      <p>ВКонтакте | Telegram | YouTube</p>
+    </div>
+    <div class="footer-col">
+      <p>&copy; 2026 Книжный червь. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

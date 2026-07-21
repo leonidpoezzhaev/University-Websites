@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея — Книжный червь</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+    <div class="logo">Книжный червь</div>
+    <button class="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+    </button>
+    <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="news.html">Новости</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="gallery.html" class="active">Галерея</a>
+        <a href="about.html">О нас</a>
+        <a href="order.html">Заказ</a>
+        <a href="contacts.html">Контакты</a>
+    </nav>
+</header>
+
+<main class="main">
+    <h2>Фотографии из магазина</h2>
+    <div class="gallery-grid" id="galleryGrid">
+        <img src="images/gallery1.jpg" alt="Интерьер" class="gallery-item">
+        <img src="images/gallery2.jpg" alt="Полки с книгами" class="gallery-item">
+        <img src="images/gallery3.jpg" alt="Читальный зал" class="gallery-item">
+        <img src="images/gallery4.jpg" alt="Встреча с автором" class="gallery-item">
+        <img src="images/gallery5.jpg" alt="Детский уголок" class="gallery-item">
+        <img src="images/gallery6.jpg" alt="Кофе и книга" class="gallery-item">
+        <img src="images/gallery7.jpg" alt="Новинки" class="gallery-item">
+        <img src="images/gallery8.jpg" alt="Книжный клуб" class="gallery-item">
+    </div>
+</main>
+
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img src="" alt="" class="lightbox-img" id="lightboxImg">
+</div>
+
+<footer class="footer">
+    <div class="footer-col">
+        <h4>Контакты</h4>
+        <p>+7 (999) 765-43-21</p>
+        <p>books@bookworm.ru</p>
+    </div>
+    <div class="footer-col">
+        <h4>Мы в соцсетях</h4>
+        <p>ВКонтакте | Telegram | YouTube</p>
+    </div>
+    <div class="footer-col">
+        <p>&copy; 2026 Книжный червь. Все права защищены.</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

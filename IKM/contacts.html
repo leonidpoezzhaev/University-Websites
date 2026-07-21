@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты — Книжный червь</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Книжный червь</div>
+    <button class="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="news.html">Новости</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="about.html">О нас</a>
+      <a href="order.html">Заказ</a>
+      <a href="contacts.html" class="active">Контакты</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <h2>Контакты магазина</h2>
+    <div class="contacts-layout">
+      <div class="contact-info">
+        <p><strong>Адрес:</strong> г. Москва, ул. Арбат, д. 25</p>
+        <p><strong>Телефон:</strong> +7 (999) 765-43-21</p>
+        <p><strong>Email:</strong> books@bookworm.ru</p>
+        <button id="geolocateBtn" class="btn">Моё местоположение</button>
+      </div>
+      <div id="map" class="map-container"></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-col">
+      <h4>Контакты</h4>
+      <p>+7 (999) 765-43-21</p>
+      <p>books@bookworm.ru</p>
+    </div>
+    <div class="footer-col">
+      <h4>Мы в соцсетях</h4>
+      <p>ВКонтакте | Telegram | YouTube</p>
+    </div>
+    <div class="footer-col">
+      <p>&copy; 2026 Книжный червь. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
